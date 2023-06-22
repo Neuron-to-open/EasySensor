@@ -57,11 +57,12 @@
         })
           .then((response) => {
             
-              if (res.error_num == 0) {
+              console.log(response)
+              if (response.data.error_num == 0) {
                 this.$message({showClose: true, message: '增加成功！',type: 'success'})
               } else {
                 this.$message.error('新增失败，请重试')
-                console.log(res['msg'])
+                console.log(response['msg'])
               }
           })
       },
