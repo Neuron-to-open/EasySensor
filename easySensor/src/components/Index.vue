@@ -70,6 +70,7 @@
         this.$http.get('show/')
           .then((response) => {
             this.datalist = response.data.all
+            console.log(this.datalist)
             localStorage.setItem("temp", JSON.stringify(response.data.all))
             console.log(response.data.all)
           })
